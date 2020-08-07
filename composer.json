@@ -1,0 +1,43 @@
+{
+    "name": "debug-mx/laravel-oura",
+    "description": "A simple package for the Oura ring API",
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^6.3.1",
+        "illuminate/support": "^7.23"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Roldan",
+            "email": "mroldan@webmonster.mx"
+        }
+    ],
+    "autoload": {
+	"psr-4": {
+	    "DebugMx\\OuraRing\\": "src/"
+	},
+	"files": [
+	    "src/helpers.php"
+	]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DebugMx\\OuraRing\\Tests\\": "tests"
+        }
+    },
+    "extra":{
+	"laravel": {
+	    "providers": [
+		"DebugMx\\OuraRing\\ServiceProvider"
+	    ],
+	    "aliases": {
+		"OuraRing": "DebugMx\\OuraRing\\Facade"
+	    }
+	}
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.3",
+        "phpunit/phpunit": "^9.2"
+    }
+}
